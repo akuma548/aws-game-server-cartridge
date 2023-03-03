@@ -42,6 +42,6 @@ services:
       - MAX_PLAYERS=10
       - DISCORD=0
     restart: always
-    stop_grace_period: 2m'
+    stop_grace_period: 2m" >> docker-compose.yml'
 echo "@reboot root (cd /usr/games/serverconfig/ && docker-compose up)" > /etc/cron.d/awsgameserver
 sudo docker-compose up
