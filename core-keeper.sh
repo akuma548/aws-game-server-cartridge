@@ -28,19 +28,13 @@ cd /usr/games/serverconfig
 sudo bash -c 'echo "version: \"3\"
 services:
   core-keeper:
-    image: escaping/core-keeper-dedicated
+    image: tedtramonte/core-keeper-server
     volumes:
       - ./server-files:/home/steam/core-keeper-dedicated
       - ./server-data:/home/steam/core-keeper-data
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
-      - WORLD_INDEX=0
       - WORLD_NAME=Core Keeper Server
-      - WORLD_SEED=
-      - GAME_ID=
-      - DATA_PATH=
-      - MAX_PLAYERS=10
-      - DISCORD=0
     restart: always
     stop_grace_period: 2m" >> docker-compose.yml'
 echo "@reboot root (cd /usr/games/serverconfig/ && docker-compose up)" > /etc/cron.d/awsgameserver
