@@ -31,6 +31,7 @@ services:
     image: tedtramonte/core-keeper-server
     volumes:
       - /usr/games/serverconfig/server-data:/data
+      - /usr/games/serverconfig/server-files:/home/steam/core-keeper-server
     environment:
       - WORLD_NAME=Core Keeper Server
     restart: always
