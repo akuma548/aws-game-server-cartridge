@@ -20,6 +20,7 @@ services:
       PASSWORD: a password
       SLOTS: 5
       PAUSE: 1
+      WORLD: worldname
     volumes:
       - /usr/games/serverconfig/saves:/necesse/saves
       - /usr/games/serverconfig/logs:/necesse/logs" >> docker-compose.yml'
